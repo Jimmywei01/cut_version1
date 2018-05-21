@@ -1,0 +1,39 @@
+.clearfix {
+    @include clearfix();
+}
+
+// header
+.countainer {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.log {
+    position: relative;
+    float: left;
+    padding: 2px 0;
+}
+
+.nav {
+    float: right;
+    line-height: 100px;
+    li {
+        float: left;
+        a {
+            padding: 0 12px;
+            color: #333333;
+            text-decoration: none;
+            font-size: 13px;
+        }
+    }
+}
+
+.bundery::before {
+    content: "|";
+    padding: 0 12px;
+}
+
+.nav .active a {
+    color: #d6b1b1;
+}
+

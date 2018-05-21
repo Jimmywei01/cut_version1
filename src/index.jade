@@ -1,12 +1,12 @@
 extends _layout.jade
-block concet
 
+block header
     #header
-        .countainer
+        .countainer.clearfix
             .log
                 img(src="http://lorempixel.com/112/100/", alt="none")
             .nav
-                ul
+                ul.clearfix
                     li.active
                         a(href="#") HOME+
                     li
@@ -25,7 +25,7 @@ block concet
                         a(href="#") CART(2)+
                     li 
                         a(href="#") SEARCH+
-    
+block content   
     #content
         .slider
             img(src="http://lorempixel.com/1920/1080/", alt="none")
@@ -163,7 +163,8 @@ block concet
                                 a(href="mailto:example@gamil.com") example@gamil.com
                         .map
                             a(href="#" target="_blank") view map 
-   
+ 
+block footer  
     #footer
         .container
             .logo
@@ -183,9 +184,9 @@ block concet
                         a(href="http://") 4
                     li
                         a(href="http://") 5
+            //- .box example
     #go-top top
-
-
+        
             
     
 

@@ -62,7 +62,7 @@ gulp.task('bower', function () {
 gulp.task('vendorJs', ['bower'], function () {     
   return gulp.src([
     './.tmp/vendors/**/**.js',
-    './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js' 
+    './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', 
   ])
   .pipe($.order([  //使用相同的語法重新排序文件
     'jquery.js'
@@ -79,16 +79,15 @@ gulp.task('sass', function () {
   var processors = [          // 插建 控制瀏覽器版本
     autoprefixer({browsers: ['last 5 version' ,'> 5%', 'ie 6-8']})
   ];
-  return gulp.src(['./src/css/**/*.sass', './src/css**/*.scss']) 
+  return gulp.src(['./src/css/*.sass', './src/css/*.scss']) 
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass({                                  // 載入外部sass資源(自定義liberary)
       outputStyle: 'nested',
-      includePaths: ['./node_modules/bootstrap/scss']
-    })
-      .on('error', $.sass.logError))
+      includePaths: ['./node_modules/bootstrap/scss',
+      ]}).on('error', $.sass.logError))
     .pipe($.postcss(processors))  // 編譯css
-    .pipe($.concat('all2.css')) // 合併檔
+    .pipe($.concat('main.css')) // 合併檔
     .pipe($.if(options.env === 'production', $.cleanCss())) // 假設開發環境則壓縮 CSS
     .pipe($.sourcemaps.write('.'))  // 找出合併檔的檔案
     .pipe(gulp.dest('./public/css'))
