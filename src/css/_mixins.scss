@@ -13,7 +13,6 @@
     height: image-height("./src/images/#{$img}"); 
 }   
 
-
 //三角形產生器 預設是等腰三角形，如要做正三角形，請將type預設變數改為0.8666666 
 //右上角的，就打：+triangle(30px, red, right-top) 左下角的就打：+triangle(30px, red, left-bottom)
 @mixin triangle($size, $color, $align,$type:1){
