@@ -1,10 +1,16 @@
+
+// @import "fa-brands.scss";
+// @import "fa-regular.scss";
+// @import "fa-solid.scss";
+
 *{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 body{
-    font-family: "Source Sans Pro",sans-serif;
+    // font-family: "Source Sans Pro",sans-serif;
+    font-family: 'Sunflower',sans-serif;
 }
 
 .clearfix {
@@ -43,7 +49,7 @@ body{
 }
 
 .nav .active a {
-    color: #d6b1b1;
+    color: goldenrod;
 }
 
 
@@ -194,6 +200,10 @@ ul{
     background-attachment: fixed;
     a{
         text-decoration: none;
+        &:hover {
+            color: #fff;
+            background-color: goldenrod;
+        }
     }
 }
 
@@ -241,7 +251,7 @@ p{
     height: auto;
 }
 .feature{
-    padding-bottom: 100px;
+    padding: 100px 0;
     .info{
         margin-top: 70px;
         text-align: center;
@@ -257,7 +267,7 @@ p{
 }
 .feature {
     .title,.price {
-        color: #d6b1b1;
+        color: goldenrod;
     }
     p{
         margin: 0;
@@ -268,6 +278,10 @@ p{
 
 .button.border{
     border:1px solid #222222; 
+    &:hover {
+        color: #fff;
+        background-color: #222222;
+    }
 }
 
 // outlets
@@ -290,8 +304,77 @@ p{
     }
 } 
 .outlets .map a{
-    color: #d6b1b1;
+    padding-left: 5px;
+    color: goldenrod;
     text-transform: uppercase;
     text-decoration: none;
 }
 
+.outlets span{
+     color: goldenrod;
+}
+
+
+//footer
+#footer{
+    background: #f5f5f5;
+    position: relative;
+    padding: 80px 0;
+}
+#footer .logo{
+    position: absolute;
+    border: 5px solid #f5f5f5;
+    padding: 20px;
+    background: #fff;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#footer .copyright{
+    float: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#footer .subtitle{
+    color: #323232;
+    font-size: 12px; 
+}
+#footer .social-media{
+    float: right;
+    li{
+        float: left;
+    }
+}
+
+#footer .social-media a{
+    display: inline-block;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    color: #222222;
+    border: 1px solid #222222;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px;
+    padding-bottom: 2px;
+    &:hover{
+        color: #f5f5f5;
+        background: #222222;
+    }
+}
+
+#go-top a{
+    position: fixed;
+    right: 20px;
+    bottom: 35px;
+    width: 40px;
+    height: 40px;
+    background:rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+
+}

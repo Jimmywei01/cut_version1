@@ -6,6 +6,7 @@ const autoprefixer = require('autoprefixer'); // 前輟詞 require 不用加 gul
 const minimist = require('minimist'); // 用來讀取指令轉成變數
 const gulpSequence = require('gulp-sequence').use(gulp);  //將所有task(任務)按順序運行
 
+
 // production || development
 // # gulp --env production 發布版本
 // gulp build --env production 發布流程
